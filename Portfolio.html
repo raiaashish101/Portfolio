@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Website Under Construction</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+	<style> /*CSS CODE*/
+		
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			color: #333;
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			max-width: 1000px;
+			margin: 500 auto;
+			padding: 100px;
+			text-align: center;
+			background-color: #fff;
+			border-radius: 20px;
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+		}
+
+		h1 {
+			font-size: 50px;
+			margin-bottom: 20px;
+			color: #333;
+		}
+
+		p {
+			font-size: 20px;
+			margin-bottom: 20px;
+			color: #666;
+		}
+		
+        
+		/*Countdown CSS*/
+
+        .countdown {
+		}
+
+		.countdown div{
+			flex-basis:20px ;
+			padding: 20px;
+		}
+
+		.countdown p{
+			font-size: 50px;
+			margin-bottom: 10px;
+		}
+
+		.countdown span{
+			font-size: 20px;
+		}
+
+
+		@media (max-width: 767px) {
+			h1 {
+				font-size: 36px;
+			}
+
+			p {
+				font-size: 18px;
+			}
+		}
+
+		/*.btn {
+			display: inline-block;
+			padding: 10px 20px;
+			border-radius: 20px;
+			background-color: #333;
+			color: #fff;
+			text-decoration: none;
+			transition: background-color 0.3s ease;
+		}*/
+		
+		/*		subscribe button*/
+		/*.btn:hover {
+			background-color: #666;
+		}*/
+
+		.social-icons {
+			margin-top: 50px;
+		}
+
+		.social-icons a {
+			display: inline-block;
+			margin-right: 50px;
+			font-size: 50px;
+			color: #333;
+			text-align: right;
+			transition: color 0.3s ease;
+		}
+
+		.social-icons a:hover {
+			color: #666;
+		}
+
+		.fa-facebook-square {
+			color: #3b5998;
+		}
+
+		.fa-twitter-square {
+			color: #1da1f2;
+		}
+
+		.fa-instagram-square {
+			color: #e4405f;
+		}
+
+		.fa-linkedin{
+			color: #0072B5;
+		}
+
+		.fa-behance-square{
+			color: #053eff;
+		}
+
+	</style> <!-- CSS code ends -->
+</head>
+
+
+<body>
+	<div class="container">
+		<i class="fas fa-tools fa-4x"></i>
+		<h1 style="padding: 50px;">Website Under Construction</h1>
+		
+		<img src="C:\Users\Aashish-PC\Desktop\Repo_Portofolio\image 1.png" alt="asdf"width="750" height="590" class="image" align="center">
+		
+
+		<!-- Countdown code Starts-->
+		<h2>Countdown</h2>
+		
+		<div class="countdown row justify-content-center" id="countdown" align="center" >
+
+			<div class="col-3">
+				<p id="days">00</p>
+				<span>Days</span>
+			</div>
+
+			<div class="col-3">
+				<p id="hours">00</p>
+				<span>Hours</span>
+			</div>
+
+			<div class="col-3">
+				<p id="minutes">00</p>
+				<span>Minutes</span>
+			</div>
+
+			<div class="col-3">
+				<p id="seconds">00</p>
+				<span>Seconds</span>
+			</div>
+
+		</div>
+		<!-- Countdown code Ends -->
+	
+		<p style="padding: 50px;">Working on something awesome. Be sure to come back soon!</p>
+		
+		<!-- <a href="#" class="btn">Subscribe</a> -->
+		
+		<div class="social-icons">
+			<a href="https://www.facebook.com/raiaashish404/" target="_blank"> <i class="fab fa-facebook-square"></i></a>
+
+			<a href="https://twitter.com/raiaashish101" target="_blank">       <i class="fab fa-twitter-square"></i></a>
+
+			<a href="https://www.instagram.com/rai.uidesign/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+
+			<a href="https://www.linkedin.com/in/raiaashish101/" target="_blank">  <i class="fab fa-linkedin"></i></a>
+
+			<a href="https://www.behance.net/raidaashish" target="_blank"> <i class="fab fa-behance-square"></i></a>
+
+
+		</div>
+	
+	</div>
+
+	<script>
+		/// Set the date we're counting down to
+		var countDownDate = new Date("July 30, 2023 00:00:00").getTime();
+
+		// Set the date we're counting down to
+		var x = setInterval(function()
+		{
+			var now = new Date().getTime();
+			var distance = countDownDate - now;
+
+			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+			document.getElementById("days").innerHTML = days;
+			document.getElementById("hours").innerHTML = hours; 
+			document.getElementById("minutes").innerHTML = minutes; 
+			document.getElementById("seconds").innerHTML = seconds;  
+
+			// If the countdown is over, display a message
+			if (distance < 0) 
+			{ 
+				clearInterval(x);
+
+				document.getElementById("days").innerHTML = "00";
+			document.getElementById("hours").innerHTML = "00"; 
+			document.getElementById("minutes").innerHTML = "00"; 
+			document.getElementById("seconds").innerHTML = "00";
+
+
+ 			}
+
+		}, 1000);
+
+		// // Set the date we're counting down to
+		// var countDownDate = new Date("July 30, 2023 00:00:00").getTime();
+
+		// // Update the countdown every second
+		// var x = setInterval(function() {
+
+		// 	// Get the current time
+		// 	var now = new Date().getTime();
+
+		// 	// Calculate the distance between now and the countdown date
+		// 	var distance = countDownDate - now;
+
+		// 	// Calculate days, hours, minutes, and seconds
+		// 	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		// 	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		// 	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		// 	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+		// 	// Add leading zero if necessary
+		// 	hours = hours < 10 ? "0" + hours : hours;
+		// 	minutes = minutes < 10 ? "0" + minutes : minutes;
+		// 	seconds = seconds < 10 ? "0" + seconds : seconds;
+
+		// 	// Update the countdown timer
+		// 	document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+		// 	+ minutes + "m " + seconds + "s ";
+
+		// 	// If the countdown is over, display a message
+		// 	if (distance < 0) {
+		// 		clearInterval(x);
+		// 		document.getElementById("countdown").innerHTML = "EXPIRED";
+		// 	}
+		// }, 1000);
+	</script>
+
+</body>
+</html>
